@@ -1,0 +1,764 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap");
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+/* Основной WELCOME-фон*/
+
+/* видео-фон */
+.bg-video-body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    background: url('../images/textures/stone_wall.png') center / cover no-repeat;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*object-position: center 40%;*/
+    z-index: -1;
+
+}
+
+/* Приветствие */
+.greeting {
+    /*position: relative;*/
+    /*z-index: 1;*/
+    margin-top: 3rem;
+}
+
+.greeting-title {
+
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
+    color: #490202;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 0 4px rgba(234, 91, 14, 0.9),
+    0 0 6px rgba(220, 138, 51, 0.9);
+    animation: stroke-glow 2.5s ease-in-out infinite;
+
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+
+}
+
+@keyframes stroke-glow {
+    0%, 100% {
+        text-shadow: 0 0 4px rgba(234, 91, 14, 0.9),
+        0 0 6px rgba(220, 138, 51, 0.9);
+    }
+    50% {
+        text-shadow: 0 0 8px rgb(255, 153, 0),
+        0 0 12px rgb(255, 174, 0);
+    }
+}
+
+/* Java-cup под заголовком */
+.java-cup-img {
+    display: block;
+    /*margin: 1rem auto;*/
+    width: 300px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+/* Карточка с вводом ника */
+
+.scroll-container {
+    position: relative;
+    z-index: 1;
+    width: 600px;
+    max-width: 80%;
+    padding: 3rem 2rem 2rem;
+    background: url('../images/textures/h-scroll.png') center top no-repeat;
+    background-size: auto 100%;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.scroll-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scroll-container label {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    color: #4b2e1e;
+    text-align: center;
+}
+
+.scroll-container input {
+    width: 80%;
+    max-width: 300px;
+    padding: 0.75rem 1rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background: rgba(255, 248, 220, 0.9);
+    margin-bottom: 1.5rem;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-container button {
+    width: 70%;
+    max-width: 300px;
+    padding: 0.9rem;
+    font-size: 1.5rem;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #ff8c00, #ff4500);
+    color: #0c0000;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s;
+}
+
+.scroll-container button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.scroll-container button:hover:enabled {
+    background: linear-gradient(90deg, #ff6a00, #e03e00);
+}
+
+/*TEAMS*/
+/*фон для формы preQuest.jsp*/
+
+body.team-bg {
+    background: #768f6c;
+    display: flex;
+    flex-direction: column;
+}
+
+/*оформление поля с вопросом пре-квеста*/
+
+.question-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: url('../images/textures/griphel.webp') center/cover no-repeat;
+    padding: 1.5rem 4rem;       /* отступы, чтобы камни и текст не торчали за границу */
+    box-sizing: border-box;
+    margin-bottom: 0.5rem;
+}
+
+/* общий класс для камней-кристаллов */
+.question-container .stone {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: auto;
+    pointer-events: none;
+}
+/* кристаллы слева */
+.question-container .stone-left.first  { left: 1rem; }
+.question-container .stone-left.second { left: 5rem; }
+.question-container .stone-left.third { left: 9rem; }
+.question-container .stone-left.fourth { left: 13rem; }
+
+/* кристаллы справа */
+.question-container .stone-right.fourth  { right: 13rem; }
+.question-container .stone-right.third { right: 9rem; }
+.question-container .stone-right.first  { right: 5rem; }
+.question-container .stone-right.second { right: 1rem; }
+
+/* сам текст внутри — центрируем и даём переносы */
+.question-text {
+    margin: 0;
+    padding: 0 3rem;
+    font-size: clamp(1.2rem, 3vw, 1.75rem);
+    line-height: 1.4;
+    text-align: center;
+    text-shadow: 4px 0 4px rgb(12, 0, 0);
+    color: #bdad9c;
+    word-wrap: break-word;
+    max-width: 90%;
+    z-index: 1;                 /* поверх камней */
+    position: relative;
+}
+
+.quiz-container {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: url('../images/textures/common_surface.png')center / cover no-repeat;
+
+}
+
+/*оформление карточки команды*/
+
+.teams-grid {
+    display: grid;
+    flex: 1;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    align-content: space-between;
+    justify-items: center;
+    align-items: center;
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.team-card {
+    width: 100%;
+    max-width: 500px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/textures/parchment.png') center/cover no-repeat;
+    border: 3px solid transparent;
+    border-radius: 0.5rem;
+    transition: border-color 0.2s;
+}
+
+/* когда внутри лейбла выбран radio — меняем цвет рамки */
+.team-card:has(input[type="radio"]:checked) {
+    border-color: goldenrod;
+}
+
+/*опускаем второй ряд карточек вниз на 6rem*/
+.teams-grid .team-card:nth-child(3),
+.teams-grid .team-card:nth-child(4) {
+    margin-top: 6rem;
+}
+.teams-grid .team-card:nth-child(1),
+.teams-grid .team-card:nth-child(2) {
+    margin-top: 4rem;
+}
+
+/*Оформление кнопки*/
+/* контейнер для кнопки  */
+.submit-container {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0.2rem; /* отступ сверху/снизу*/
+}
+
+/* кнопка подтверждения  */
+.submit-container .btn {
+    width: 70%;
+    max-width: 300px;
+    padding: 0.9rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #ff8c00, #ff4500);
+    color: #0c0000;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s;
+}
+
+/*оформление аватаров*/
+
+.card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.avatar-container {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.avatar-img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+
+/*подпись команды*/
+
+.team-level {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #4a3820;
+    font-family: 'Cinzel', serif;
+}
+
+/* КРИСТАЛЛЫ ЖИЗНЕЙ*/
+.lives-container {
+    margin-bottom: 1rem;
+}
+
+.life-icon {
+    width: 48px;
+    height: auto;
+    margin: 0 0.25rem;      /* небольшой интервал между кристаллами */
+    vertical-align: middle;
+}
+
+/* КУБКИ*/
+/* контейнер для магического кубка */
+.beast-container {
+    position: absolute;
+    left: 50%;
+    bottom: 10rem;             /* отодвинуть над кнопкой */
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 10;
+}
+.beast-icon {
+    height: 15rem;    /* например, 4rem — 4×размер базового шрифта */
+    width: auto;
+}
+.avatar–flip {
+    transform: scaleX(-1);
+}
+
+
+/* СПИСОК ТЕСТОВ*/
+
+/* ====== общий грид для списка и правил ====== */
+.list-and-rules-grid {
+    display: grid;
+    /* левая колонка — в 1.8 раза шире правой */
+    grid-template-columns: 1.8fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* левая колонка */
+/* ====== доска (background + padding) ====== */
+.tests-column.wood-board-card {
+    background: url('../images/textures/common_surface.png') center/contain no-repeat;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 100%;
+    padding: 3rem 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    border-radius: 0.5rem;
+    min-height: 400px;
+}
+
+/* правая колонка */
+.wood-board-card.rules-column {
+    background: url('../images/textures/v-scroll.png') center/contain no-repeat;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 100%;    /* фон всегда тянется по высоте */
+    padding: 7rem 2rem 7rem 2rem;
+}
+/* колонки подгоняем под высоту содержимого */
+.tests-column,
+.rules-column {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* ====== список внутри доски ====== */
+.test-list {
+    background: #fff;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    list-style: none;
+    padding: 0.5rem 0;
+}
+
+.test-list {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* каждый пункт списка */
+.test-list .list-group-item {
+    border-top: 1px solid #dee2e6;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+}
+
+.rules-title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* сам текст правил */
+.rules-column p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+/* контейнер под кнопкой */
+.team-logo-container {
+    text-align: center;
+    margin-top: 3.5rem; /* отступ над логотипом */
+}
+
+/* сама картинка */
+.team-logo {
+    width: 30rem;          /* или в процентах от контейнера */
+    height: auto;        /* сохраняем пропорции */
+}
+
+/*Question.jsp*/
+/* фон текстуры и отступы вокруг блока вопроса */
+.quiz-question-container {
+    background: url('../images/textures/griphel.webp') center/cover no-repeat;
+    padding: 2rem 3rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-right: 18rem;
+
+}
+
+/* оформление текста вопроса */
+.quiz-question-text {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-weight: 500;
+    line-height: 1.2;
+    color: #fff;
+    -webkit-text-stroke: 0.5px #000;  /* тонкая чёрная обводка */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    word-wrap: break-word;
+    margin: 0 0 1rem;
+}
+.quiz-question-container h4 {
+    color: #daa520;
+}
+
+/* СТИЛИ ДЛЯ ТАЙМЕРА И ЖИЗНЕЙ */
+.timer-and-lives {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;              /* отступ между таймером и первым кристаллом */
+    margin-bottom: 1rem;
+}
+
+.station-clock {
+    align-self: flex-start;
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    color: #daa520;
+    background-color: #000;
+    padding: 0.5em 1em;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    border-radius: 0.25rem;
+    text-shadow:
+            0 0 4px #daa520,
+            0 0 8px #daa520,
+            0 0 16px #daa520;
+    box-shadow:
+            inset 0 0 8px rgb(218,165,32),
+            0 0 12px rgba(0,0,0,0.5);
+}
+
+.station-clock .life-icon {
+    width: 1.5em;    /* высота кристалла = 1.5 строки текста */
+    height: auto;
+}
+
+.lives-inline {
+    display: flex;
+    gap: 0.25rem;
+}
+/* Боковая панель вопросов*/
+.quiz-question-container .question-nav {
+    position: absolute;
+    top: 0.5rem;       /* отступ от верха доски */
+    right: 2rem;     /* отступ от правой границы доски */
+    display: grid;
+    grid-template-columns: repeat(5, 2.5rem);
+    grid-auto-rows: 2.5rem;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0.5rem;
+    max-height: 70vh;
+    overflow-y: auto;
+    z-index: 5;
+
+}
+
+/* сами кнопки нумерации */
+.question-nav .nav-item {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    font-size: 0.9rem;
+    line-height: 2.5rem;
+    text-align: center;
+}
+
+/* отвеченные */
+.question-nav .nav-item.answered {
+    background-color: #28a745;
+    color: #fff;
+}
+
+/* текущий */
+.question-nav .nav-item.current {
+    border: 2px solid #0d6efd;
+}
+
+
+
+/* ТАБЛИЦЫ РЕЗУЛЬТАТОВ*/
+
+/* === секция 1: видео‑фон на весь экран === */
+.section-video {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.section-video video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+/* контейнер поверх видео */
+.section-video .video-overlay {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.video-overlay .result-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.video-overlay .result-wrap {
+    margin-top: 10vh;
+}
+
+.video-overlay .result-wrap {
+    max-width: 800px;
+    width: 90%;
+}
+
+/* подсказка “Рейтинг ниже” */
+.rating-hint {
+    font-family: 'Orbitron', monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ff9900;
+    text-shadow:
+            0 0 4px #daa520,
+            0 0 8px #daa520;
+    margin-top: 0.5rem;
+}
+
+
+
+/* === секция 2: статичный фон === */
+.section-image {
+    background: url('../images/textures/griphel.webp')
+    center / cover no-repeat;
+    padding: 4rem 2rem;
+}
+
+
+/* -------------------
+   ОБЩАЯ ОБЁРТКА ДЛЯ ТАБЛИЦ
+   ------------------- */
+details {
+    background: url('../images/textures/common_surface.png') center/cover no-repeat;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+/* -------------------
+   СТИЛИ ДЛЯ summary (заголовка аккордеона)
+   ------------------- */
+details summary {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    color: #daa520;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background: rgb(255, 153, 0);
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+    user-select: none;
+}
+
+/* при открытии — чуть более тёмный */
+details[open] > summary {
+    background: rgb(218, 165, 32);
+}
+
+/* -------------------
+   СТИЛИ ДЛЯ ТАБЛИЦ
+   ------------------- */
+/* Обёртка таблицы — полупрозрачный фон */
+details table {
+    background: rgb(218, 165, 32) !important;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.section-image details table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+/* Заголовок таблицы */
+details table thead th {
+    background: rgb(255, 153, 0) !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+/* Чередование строк — лёгкая подсветка */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* При наведении на строку */
+.table-hover tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/*!* Убираем границы между ячейками, чтобы выглядело как единая «доска» *!*/
+/*details table,*/
+/*details table th,*/
+/*details table td {*/
+/*    border: none !important;*/
+/*}*/
+
+/* Увеличим отступы в ячейках */
+details table td,
+details table th {
+    padding: 0.75rem 1rem;
+}
+
+/* Строка текущего результата */
+.table-success {
+    --bs-table-accent-bg: #064 !important;
+    --bs-table-striped-bg: #064 !important;
+    color: #fff !important;
+}
+
+/* ----------------------
+   КАРТОЧКА С ИТОГАМИ ТЕСТА
+   ---------------------- */
+.result-summary {
+    background: url('../images/textures/parchment.png') center/cover no-repeat;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    max-width: 600px;
+    margin: 1rem auto 2rem;
+    padding: 2rem 1.5rem;
+}
+
+.result-summary .card-body {
+    font-family: 'Orbitron', monospace;
+    color: #2c0808;
+    text-shadow:
+            0 0 4px #b29755,
+            0 0 8px #947e44;
+    text-align: center;
+}
+
+.result-summary .card-text {
+    margin-bottom: 1.25rem;
+    font-size: 2rem;
+}
+
+.result-summary .card-text strong {
+    color: #fff;
+    background: #0c0000;
+    padding: 0.1em 0.25em;
+    border-radius: 0.25rem;
+    display: inline-block;
+    min-width: 3ch;
+}
+.result-header {
+    position: relative;
+    z-index: 2;
+}
+
+.trophy-icon {
+    width: 70px;
+    height: auto;
+    vertical-align: middle;
+}
+
+
+/* Уберём лишние отступы у иконок */
+.cup-icon, .team-avatar {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Размеры */
+.cup-icon {
+    width: 60px;
+    height: auto;
+}
+.team-avatar {
+    width: 48px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Шрифты для цифр и названия */
+.place-number,
+.points-number,
+.team-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    color: #4a3811;
+    line-height: 1;
+}

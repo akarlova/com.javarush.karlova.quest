@@ -1,0 +1,489 @@
+{
+  "id": 1,
+  "title": "Java ТехТест",
+  "level": "EASY",
+  "language": "ru",
+  "questions": [
+    {
+      "questionText": "<p>Кто является родителем класса Throwable?</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "Error",
+        "Serializable",
+        "Object",
+        "У класса Throwable нет родителей, так как это основной класс, от которого наследуются исключения"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<p>Что такое Set в Java</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "Это интерфейс для коллекции, который всегда отсортирован",
+        "Это интерфейс для коллекции, в котором не может быть одинаковых элементов",
+        "Это интерфейс для коллекции, в котором все элементы идут по порядку их добавления",
+        "Это интерфейс для коллекции, который поддерживает добавление и удаление элементов с хвоста"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>Что выведет следующий код:</p>\n\n<pre><code>public static void main(String[] args) {\n         System.out.print(method1() && method2());\n    }\n      boolean method1() {\n\n        System.out.print(\"method1\");\n        return false;\n    }\n      boolean method2() {\n         System.out.println(\"method2\");\n\n        return true;\n    }\n</code></pre>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "Произойдет ошибка компиляции",
+        "method2 false",
+        "method1 false",
+        "method1 method2 false"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<p>Что такое цикл в языке программирования Java</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "цикл — это блок кода, который выполняется многократно, пока выполняется условие",
+        "цикл — это блок кода, который выполняется только один раз, если выполняется условие",
+        "цикл — это блок кода, который выполняется пока условие ложно, и звершается когда условие становится истиным",
+        "ничего из вышеперечисленного"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<p>Как использовать TreeMap с типом данных не поддерживающим Comparable?</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "Вызвать у объекта TreeMap сеттер setComparator(false)",
+        "Передать подходящий Comparator в конструктор TreeMap",
+        "Если тип данных не поддерживает Comparable, то использовать TreeSet невозможно",
+        "Вызвать у объекта TreeMap сеттер setComparator(true)"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>Значение какого типа возвращают методы add и addAll</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "int",
+        "Collection<?>;",
+        "boolean",
+        "void"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<p>Какие функции выполняет оператор continue внутри циклов for, while, do-while:</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "пропустить текущую итерацию и перейти к следующей итерации",
+        "выход из цикла",
+        "пропуск текущей итерации",
+        "выходит из метода, возвращая результ"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<p>Что будет выведено в консоль:</p>\n\n<pre><code>try {\n   System.out.print(\"trying \");\n    System.exit(0);\n}\n finally {\n    System.out.print(\"finally\");\n}\n</code></pre>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "trying finally",
+        "trying",
+        "finally",
+        "Код не скомпилируется"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>В каких случаях будет выполнен код в блоке finally?</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "Код будет выполнен только если исключение возникло и не было обработано в блоке catch",
+        "Код будет выполнен всегда, независимо от того, было исключение или нет",
+        "Код будет выполнен, если исключений не было",
+        "Код будет выполнен только если исключение было обработано в блоке catch"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>Обязательное условие наследования:</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "Класс наследник должен содержать экземпляр класса родителя",
+        "Такого условия не существует",
+        "Между наследником и родителем должно быть отношение «является»",
+        "Класс родитель обязан имплементировать interface Super"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<p>Что такое боксинг и анбоксинг?</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "Это процесс преобразования примитивных типов в классы-обёртки и наоборот.",
+        "Это процесс преобразования объекта программы в прокси, который предоставляет какую-то новую функциональность, и наоборот.",
+        "Это процесс распаковки и запаковки товаров, который сопровождается съёмкой видео.",
+        "Это процесс упаковки скомпилированных Java-классов в общий JAR-файл, и наоборот."
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<p>Какое ключевое слово запрещает наследоваться от класса?</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "finalize",
+        "volatile",
+        "private",
+        "final"
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<p>Java интерфейс – это</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "Примитивный тип данных",
+        "Класс, в котором все методы абстрактные.",
+        "Договор о способе взаимодействия между компонентами программы.",
+        "Шаблон, по которому создаются экземпляры – объекты"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<p>Какой из классов реализует два интерфейса List и Deque?</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "LinkedList<E>;",
+        "LinkedHashSet<E>;",
+        "LinkedHashMap<K,V>;",
+        "ArrayList<E>;"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<p>Назовите общий интерфейс для Set и List</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "Collection",
+        "Sequence",
+        "Queue",
+        "Map"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<p>Какой из интерфейсов коллекции не наследует Collection<E>?</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "Queue<E>",
+        "Set<E>;",
+        "List<E>;",
+        "Map<E>;"
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<p>Какие из нижеперчисленных операторов являются частью StreamAPI?</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "map(), filter(), peek(), first(), skip()",
+        "map(), filter(), peek(), reduce(), skip()",
+        "map(), filter(), peek(), reduce(), zip()",
+        "map(), filter(), scan(), reduce(), skip()"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>Можно ли использовать тип int в Java для того, чтобы хранить число жителей нашей планеты?</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "Нет",
+        "Да",
+        "",
+        ""
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<p>Назовите основное отличие интерфейса от абстрактного класса?</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "У абстрактного класса могут быть поля, определяющие состояние",
+        "Класс - это тип данных, а интерфейс - нет",
+        "У методов интерфейса не может быть реализации",
+        "Абстрактный класс не обязан иметь реализацию, а интерфейс обязан"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<p>Объект– это</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "Контракт между двумя компонентами.",
+        "Шаблон, по которому создаются экземпляры.",
+        "Ссылка на область в памяти.",
+        "Экземпляр, созданный по шаблону."
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<p>Что выведет следующий код:</p>\n\n<pre><code>if(true) {\n   break;\n   System.out.println(\"Hello world\");\n}\n</code></pre>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "ошибка компиляции",
+        "ничего из этого",
+        "ничего не выведет",
+        "Hello world"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<p>Какой класс является родителем для java.lang.Exception</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "Throwable",
+        "У класса Exception нет родителя",
+        "Error",
+        "Serializable"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<p>Какая реализация Map существует в Java?</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "StackMap",
+        "ArrayMap",
+        "TreeMap",
+        "MapSet"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<p>Что выведет следующий код:</p>\n\n<pre><code>public static void main(String[] args) {\n        System.out.println(method1() & method2());\n    }\n    static boolean method1() {\n        System.out.print(\"method1 \");\n        return false;\n    }\n    static boolean method2() {\n       System.out.print(\"method2 \");\n       return true;\n    }\n</code></pre>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "method2 false",
+        "method1 false",
+        "method1 method2 false",
+        "ошибка компиляции"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<p>Какие функции выполняет оператор break внутри циклов for, while, do-while:</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "выходит из метода возвращая результат",
+        "выход из цикла",
+        "прекращает работу программы",
+        "заканчивает текущую итерацию цикла и переходит к следующей"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>В каких классах элементы хранятся в отсортированном виде?</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "HashSet<E>;и HashMap<K,V>;",
+        "LinkedList<E>;",
+        "ArrayList<E>;",
+        "TreeSet<E>;и TreeMap<K,V>;"
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<p>Какой из методов возвращает нам количество элементов коллекции?</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        ".length();",
+        ".size();",
+        ".capacity();",
+        ".sizeOf();"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>Чему будет равен <code>number</code> в данном примере?</p>\n\n<pre><code><code>int operation = 2;\nint number = 10;\nswitch (operation) {\n    case 1:\n        number = number + 10;\n        break;\n    case 2:\n        number = number - 4;\n    case 3:\n        number = number / 3;\n    case 4:\n        number = number * 10;\n        break;\n}</code></pre></code></pre>\n\n<p></p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "60",
+        "2",
+        "20",
+        "10"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<p>В основе какого класса коллекций лежит массив</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "ArrayList<E>;",
+        "TreeMap<K,V>;",
+        "LinkedList<E>;",
+        "TreeSet<E>;"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<p>Как правильно обработать несколько исключений в одном блоке catch?</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "catch(ArithmeticException | NullPointerException)",
+        "catch(ArithmeticException | NullPointerException e)",
+        "catch(ArithmeticException e | NullPointerException e)",
+        "catch(ArithmeticException e | NullPointerException e1)"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>Что будет выведено в консоль:</p>\n\n<pre><code><code>try {\n    System.out.print(\"trying \");\n    return;\n} finally {\n    System.out.print(\"finally\");\n}</code></pre></code></pre>\n\n<p></p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "Код не скомпилируется",
+        "trying",
+        "finally",
+        "trying finally"
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<p>Что случится с объектом Exception после того как исключение было обработано?</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "Поведение зависит от параметров запуска программы",
+        "Им займется сборщик мусора при следующем цикле сборки мусора",
+        "Останется жить в стеке исключений, для того что бы в будущем сформировать лог исключений",
+        "Будет сохранен в куче"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>Что такое Map в Java</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "Это интерфейс для структуры данных, который используется, что бы хранить графы",
+        "Это интерфейс для структуры данных, который хранит пары ключ-значение",
+        "Это интерфейс для хранения сложных разветвленных структур данных с помощью многомерного массива",
+        "Это реализация Set, в которой все методы синхронизированы, что позволяет использовать ее для многопоточных программ"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>Цикл while выполняет действие хотя бы один раз, даже если условие не выполняется</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "Не верно",
+        "Верно",
+        "",
+        ""
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<p>Укажите правильное высказывание о ключевом слове static:</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "Им нельзя помечать методы, можно только поля класса",
+        "Статические поля инициализируются после создания объекта класса",
+        "Из статического метода нельзя вызывать нестатические методы",
+        "В Java существуют статические невложенные классы, это классы, в которых есть только статические поля и методы"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<p>Как Java взаимодействует с типами данных при передаче аргументов в методы?</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "Примитивные типы передаются по значению, а сложные объекты — по ссылке",
+        "Аргументы передаются по значению",
+        "Зависит от реализации конкретной JDK",
+        "Аргументы передаются по ссылке"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<p>Выберите верное утверждение про HashSet и ArrayList</p>\n\n<p>Выберите один или несколько ответов:</p>",
+      "options": [
+        "ArrayList позволяет хранить дубликаты, а HashSet - нет",
+        "ArrayList - это интерфейс, а HashSet - класс",
+        "HashSet хранит пары ключ-значение, а ArrayList - нет",
+        "ArrayList сохраняет порядок вставки элементов, а HashSet - нет"
+      ],
+      "correctAnswers": [
+        0,
+        3
+      ]
+    },
+    {
+      "questionText": "<p>Как удалить элемент по индексу из Set</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "set.delete(index)",
+        "Set не поддерживает удаление элементов по индексу",
+        "set.drop(index)",
+        "set.remove(index)"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>Какой класс позволяет хранить ключ и значение?</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "HashSet<E>;",
+        "ArrayList<E>;",
+        "HashMap<K,V>;",
+        "LinkedList<E>;"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<p>Реализации какого интерфейса гаранитируют уникальность элемента коллекции?</p>\n\n<p></p>\n\n<p>Выберите один ответ:</p>",
+      "options": [
+        "Set<E>;",
+        "Deque<E>;",
+        "Map<K,V>;",
+        "List<E>;"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    }
+  ]
+}

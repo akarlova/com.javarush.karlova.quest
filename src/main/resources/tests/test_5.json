@@ -1,0 +1,69 @@
+{
+  "id": 3,
+  "title": "Проверочный тест из 5 вопросов",
+  "level": "EASY",
+  "language": "ru",
+  "questions": [
+    {
+      "questionText": "Что такое JVM?",
+      "options": [
+        "Java Virtual Machine",
+        "Java Value Method",
+        "Java Variable Manager",
+        "Java Vendor Model"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "Какой модификатор доступа позволяет обращаться из любого класса?",
+      "options": [
+        "private",
+        "protected",
+        "public",
+        "default"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "Выберите верное утверждение про HashSet и ArrayList",
+      "options": [
+        "ArrayList позволяет хранить дубликаты, а HashSet — нет",
+        "ArrayList — это интерфейс, а HashSet — класс",
+        "HashSet хранит пары ключ-значение, а ArrayList — нет",
+        "ArrayList сохраняет порядок вставки элементов, а HashSet — нет"
+      ],
+      "correctAnswers": [
+        0,
+        3
+      ]
+    },
+    {
+      "questionText": "Что возвращает метод List.get(int index) при попытке обратиться по несуществующему индексу?",
+      "options": [
+        "null",
+        "IndexOutOfBoundsException",
+        "NoSuchElementException",
+        "IllegalArgumentException"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "Какое ключевое слово используется для наследования класса в Java?",
+      "options": [
+        "extends",
+        "implements",
+        "inherit",
+        "super"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    }
+  ]
+}

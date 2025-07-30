@@ -1,0 +1,493 @@
+{
+  "id": 5,
+  "title": "Spring",
+  "level": "HARD",
+  "language": "en",
+  "questions": [
+    {
+      "questionText": "What is the default scope of a Spring bean?",
+      "options": [
+        "Singleton",
+        "Prototype",
+        "Request",
+        "Session"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "Which scopes are applicable to the web environment only?",
+      "options": [
+        "request",
+        "session",
+        "singleton",
+        "prototype"
+      ],
+      "correctAnswers": [
+        0,
+        1
+      ]
+    },
+    {
+      "questionText": "Which of the annotations provided below is correct for creating a bean only for the case when the profile \"prod\" is NOT active?",
+      "options": [
+        " @Profile(\"not prod\")",
+        " @NoProfile(\"prod\")",
+        " @Profile(\"!prod\")",
+        " @ProfileNot(\"prod\")"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "What is a Pointcut (in Spring AOP)?",
+      "options": [
+        "Code for using cross-cutting functionality.",
+        "A selection criterion to apply cross-cutting functionality.",
+        "A combination of cross-cutting functionality and the choice of where to apply it.",
+        "A spot in the execution of code where cross-cutting functionality may be applied."
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "It is assumed that the component scanning setting is configured for the base package \"org.example.components\". Which of the following packages will be scanned?",
+      "options": [
+        "org.example.components",
+        "org.example.components.persistence",
+        "org.example.services",
+        "org.example.components.persistence.dao"
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "questionText": "What is an Aspect (in Spring AOP)?",
+      "options": [
+        "Code for using cross-cutting functionality.",
+        "A combination of cross-cutting functionality and the choice of where to apply it.",
+        "A selection criterion to apply cross-cutting functionality.",
+        "A spot in the execution of code where cross-cutting functionality may be applied."
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "What is the difference between POJOs and JavaBeans?",
+      "options": [
+        "JavaBeans are regular Java objects with state and behavior, while POJOs have only getters and setters.",
+        "POJOs are regular Java objects with state and behavior, while JavaBeans have only getters and setters.",
+        "Only JavaBeans can be Spring Beans, and POJOs cannot.",
+        "Only POJOs can be Spring Beans, and JavaBeans cannot."
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "Select the first extension point in the AppicationContext lifecycle.",
+      "options": [
+        "Bean Factory Post-Processing Phase",
+        "Bean Definition Loading Phase",
+        "Bean Instantiation Phase",
+        "Bean Post-Processing Phase"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "Which annotation should be used to mark the method of a component that must be called after all the properties have been set?",
+      "options": [
+        " @Init",
+        " @PostConstruct",
+        " @PreDestroy",
+        " @AfterPropertiesSet"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "What is an Advice (in Spring AOP)?",
+      "options": [
+        "Code for using cross-cutting functionality.",
+        "A spot in the execution of code where cross-cutting functionality may be applied.",
+        "A combination of cross-cutting functionality and the choice of where to apply it.",
+        "A selection criterion to apply cross-cutting functionality."
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "What is the proper way to introduce a custom scope in ApplicationContext?",
+      "options": [
+        "Use an ApplicationContextAware bean",
+        "Use the @PostConstruct methods",
+        "Use BeanFactoryPostProcessor",
+        "Use BeanPostProcessor"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "What is a Join Point (in Spring AOP)?",
+      "options": [
+        "A selection criterion to apply cross-cutting functionality.",
+        "Code for using cross-cutting functionality.",
+        "A spot in the execution of code where cross-cutting functionality may be applied.",
+        ""
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "How can you add controller-based exception handling support gracefully to a specific method?",
+      "options": [
+        "Register an ExceptionInterceptor bean in Spring Context",
+        "Declare a method with the name \"handle\", which accepts a specific type of exception in @ControllerAdvice",
+        "As usual, use try/catch in the controller",
+        ""
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "What data cannot be manipulated using the Init Binder method?",
+      "options": [
+        "Request parameter data",
+        "A controller's root URI pattern",
+        "URI variables",
+        "Model objects"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "What is a dispatcher servlet?",
+      "options": [
+        "A servlet is responsible for routing logic in a web application.",
+        "A servlet is responsible for providing endpoints to get meta-information about a service.",
+        "It is a type of servlet that routes to a certain URI sub-path.",
+        ""
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "How are Spring MVC controllers unit-tested properly?",
+      "options": [
+        "By testing them as plain class",
+        "Using the MockMvc bean",
+        "You can't unit-test controllers, so you need to write integration tests",
+        ""
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "What is a view in Spring MVC?",
+      "options": [
+        "An endpoint that provides information about an application API",
+        "A class that provides public access to the whole model of an application",
+        "A model object that implements a renderable interface",
+        "A set of classes and resources that are responsible for rendering a model for a client"
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "What is the main difference between using the Init Binder method in controller advice and the controller itself?",
+      "options": [
+        "The Init Binder method provides much more functionality than the controller itself.",
+        "Advice is applied to multiple controllers across the whole application, while the Init Binder method is applied only to the controller in which it was declared.",
+        "The Init Binder method provides more functionality than code annotated with @ControllerAdvice.",
+        ""
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "How can you add custom request logging to a Spring MVC application?",
+      "options": [
+        "Register a HandlerInterceptorAdapter bean with logging functionality",
+        "Implement a loggable interface using a controller you want to log",
+        "Register a MvcLogger bean",
+        ""
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "What does model refer to in Spring MVC?",
+      "options": [
+        "POJO that encapsulates info about a user's session",
+        "A service layer that accesses data",
+        "A POJO that represents and encapsulates application data that needs to be reflected on the UI",
+        "The Spring route configuration file of a web application"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "How many methods of manipulating models can a controller have?",
+      "options": [
+        "Exactly one, because you have to enhance the model in the @PostConstruct method only",
+        "Exactly one, because to manipulate with multiple models, you have to implement the ModelAware interface",
+        "Multiple methods annotated @ModelAttribute",
+        ""
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "Which of the following can you NOT use to map a request using Spring MVC?",
+      "options": [
+        "Request headers",
+        "URI pattern",
+        "Request parameter and parameter conditions",
+        "Response headers"
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "What is not necessary for a controller?",
+      "options": [
+        "To add a class-level annotation of @Controller or @RestController",
+        "Implementation of an HttpRouting interface",
+        "To add a method-level annotation of @Mapping",
+        ""
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "How can we extract from the code the name variable value from the URI pattern \"/users/{name}\"?",
+      "options": [
+        "Using the @RequestParam annotation on the method parameter",
+        "This value may be extracted from the @ModelAttribute annotated method parameter.",
+        "Using the @PathVariable(\"name\") annotation on the method parameter",
+        "You cannot map on such things dynamically, so you have to declare a new method."
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "Which property should be set in order to change the connection timeout value for an embedded Tomcat web server?",
+      "options": [
+        "server.tomcat.connection",
+        "server.tomcat.connection-timeout",
+        "server.tomcat.connection.timeout",
+        "server.tomcat.timeout"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "What are the advantages of using Spring Boot?",
+      "options": [
+        "External application servers are not needed.",
+        "It simplifies dependency management.",
+        "A project setup is easy.",
+        "The JVM size is reduced."
+      ],
+      "correctAnswers": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "questionText": "In which file does Spring Boot access the default configurations?",
+      "options": [
+        "application.yml",
+        "application.yaml",
+        "Application.properties",
+        "Application.xml"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "Which annotation initializes the auto-configuration mechanism in Spring Boot?",
+      "options": [
+        " @Application",
+        " @SpringBootApplication",
+        " @ComponentScan",
+        " @Configuration"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "If a Spring Boot application is not deployed to an external web container, which packaging type should be used?",
+      "options": [
+        "WAR",
+        "EAR",
+        "ZIP",
+        "JAR"
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "Which environment variable do you need to use for a Spring profile?",
+      "options": [
+        "active.spring.profile",
+        "spring-profiles",
+        "Spring.profiles",
+        "spring.profiles.active"
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "What function(s) does Actuator perform in Spring Boot web applications?",
+      "options": [
+        "It understands traffic.",
+        "It monitors the app.",
+        "It gathers metrics.",
+        "All of the above."
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "What is the advantage of using the CommandLineRunner interface?",
+      "options": [
+        "It enables you to perform batch operations.",
+        "It enables you to run asynchronous applications.",
+        "It enables you to perform logging operations.",
+        "It enables you to run web applications."
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "How does Spring Boot handle logging?",
+      "options": [
+        "It has a built-in logging framework called LOG4J.",
+        "It requires an external library for logging.",
+        "It requires a programmer to build the customized logger.",
+        "It has a built-in logging framework called SLF4J."
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "How can we set up an embedded Tomcat server to listen to HTTP port 8000?",
+      "options": [
+        "Set httpserver.port=8000",
+        "Set webserver.port=8000",
+        "server.port=8000",
+        "Set http.port=8000"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "Which dependency do you need in order to create Spring Boot web applications?",
+      "options": [
+        "spring-boot-starter-web",
+        "spring-boot-webservice",
+        "spring-boot-web",
+        "spring-boot-starter-webapp"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "Please complete the sentence:\nProfiles allow developers to...",
+      "options": [
+        "configure an application that will run in different environments.",
+        "create backups for critical operations.",
+        "quickly restore the system after a hardware failure.",
+        "configure an application that will run on multiple computer platforms."
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "What is the security context?",
+      "options": [
+        "A framework",
+        "An interface",
+        "An API",
+        ""
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "What is the next step after successful authentication?",
+      "options": [
+        "User credentials validation",
+        "Authorization",
+        "Moving to the next Security Interceptor",
+        "Checking user permissions"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "Which annotation is used to protect the resource server with OAuth2?",
+      "options": [
+        " @EnableResourceServer",
+        " @EnableResServer",
+        " @EnableAuthServer",
+        ""
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "Which authentication type from the list CANNOT be implemented via the Spring Security API?",
+      "options": [
+        "In memory",
+        "Basic",
+        "JDBC",
+        "Stream"
+      ],
+      "correctAnswers": [
+        3
+      ]
+    }
+  ]
+}

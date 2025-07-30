@@ -1,0 +1,344 @@
+{
+  "id": 2,
+  "title": "Design Patterns",
+  "level": "EASY",
+  "language": "en",
+  "questions": [
+    {
+      "questionText": "<p>The original creators of design patterns were known as the gang of four. How many design patterns are there?</p>",
+      "options": [
+        "40",
+        "25",
+        "23",
+        "32"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<p>Design patterns are about reusing and the design experience. How is the design pattern expressed?</p>",
+      "options": [
+        "It is expressed by algorithms, an object class, and collected into mathematic operators.",
+        "It is expressed by a definition, a class diagram, and collected into a catalog of patterns.",
+        "It is expressed by agile methodology, testing, and release history.",
+        "It is expressed by common problems you create from risk analysis."
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>Design patterns are comprised of object-oriented basics. What are the object-oriented basics?</p>",
+      "options": [
+        "The basics are experience, algorithm, abstraction, and encapsulation.",
+        "The basics are state, behavior, classes, and interfaces.",
+        "The basics are structured programming, top-to-bottom layering, and logical problem-solving.",
+        "The basics are inheritance, polymorphism, abstraction, and encapsulation."
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<p>An object is an instance of a class. What is a concrete instance when working with design patterns?</p>",
+      "options": [
+        "A concrete instance refers to any occurrence of objects that exist during the runtime of a computer program.",
+        "A concrete instance refers to dynamatic object values that are always changing.",
+        "A concrete instance refers to a fixed object value that cannot be changed.",
+        "A concrete instance refers to the behavior or state of an object."
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<p>Which coding format \"implements\" when deriving a superclass with a subclass?</p>",
+      "options": [
+        "<pre><code>public class SomeSuperClass implements SomeSubClass {\n   public void doSomething() {\nSystem.out.println(\"Using implements to derive classes\");\n   }\n}</code></pre>",
+        "<pre><code>public class SomeSubClass implements SomeSuperClass {\n   public void doSomething() {     System.out.println(\"Using implements to derive classes\");\n   }\n}</code></pre>",
+        "<pre><code>public class SomeSuperClass implements {\n   public void doSomething() {\nSystem.out.println(\"Using implements to derive classes\");\n   }\n}</code></pre>",
+        "<pre><code>public implements SomeSuperClass {\n   public void doSomething() {\nSystem.out.println(\"Using implements to derive classes\");\n   }\n}</code></pre>"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>Design patterns use algorithms for the strategy pattern. How is the strategy pattern defined?</p>",
+      "options": [
+        "The strategy pattern defines functional math operations.",
+        "The strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable.",
+        "The strategy pattern defines one instance of a class with algorithms. It is also called a singleton.",
+        "The strategy pattern uses mathematical operators to complete tough programming tasks."
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>Which difference does the HAS-A relationship have in comparison to the IS-A relationship?</p>",
+      "options": [
+        "The HAS-A relationship owns its behavior, whereas the IS-A relationship leases its behavior.",
+        "The IS-A relationship cannot be inherited, but the HAS-A relationship is inherited.",
+        "Instead of inheriting behavior like the IS-A relationship, the HAS-A composes the behavior.",
+        "The IS-A relationship is inherited, and the HAS-A relationship is derived."
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<p>When working with inheritance, which kind of relationship do you have with classes?</p>",
+      "options": [
+        "Classes share an HAS-A relationship.",
+        "Classes share an one-to-one relationship.",
+        "Classes share an IS-A relationship.",
+        "Classes share a many-to-one relationship."
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<p>What does abstract mean in inheritance when working with subclasses?</p>",
+      "options": [
+        "Subclasses must add private methods and variables to the superclass.",
+        "Subclasses must override all abstract methods of its abstract superclass.",
+        "Subclasses must create their own classes, and cannot override the superclass.",
+        "Subclasses must create abstract methods and behaviors because they are abstract."
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>What is an interface, and how is it used in design patterns?</p>",
+      "options": [
+        "Design patterns use interfaces to create algorithms and math operations.",
+        "Design patterns use interfaces for reuse and creating structural patterns.",
+        "Design patterns use interfaces to create one instance of a class.",
+        "Design patterns use interfaces to define methods an object must have to be considered a particular type."
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<p>When working with design principles, which of the following defines \"Encapsulate What Varies\"?</p>",
+      "options": [
+        "t means that your design will change consistently, making your code static and not dynamatic.",
+        "It means that you must find a design pattern that works with change.",
+        "It means that you must enclose all the parts that change in your baseline.",
+        "Once you separate the parts that are changing, you can then modify those parts without affecting the rest of the code."
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<p>The Adapter pattern is a software design pattern. Which coding format is correct for creating the Adapter pattern?</p>",
+      "options": [
+        "<pre><code>class BirdAdapter implements ToyDuck \n{ \n    Bird bird; \n    public BirdAdapter(Bird bird) \n    { \n         this.bird = bird; \n    } \n}</code></pre>",
+        "<pre><code>class ToyDuck  implements BirdAdapter\n{ \n    Bird bird; \n    public BirdAdapter(Bird bird) \n    { \n         this.bird = bird; \n    } \n}</code></pre>",
+        "<pre><code>class Bird implements ToyDuck \n{ \n    Bird bird; \n    public BirdAdapter(Bird bird) \n    { \n         this.bird = bird; \n    } \n}</code></pre>",
+        "<pre><code>class BirdAdapter implements Bird\n{ \n    Bird bird; \n    public BirdAdapter(Bird bird) \n    { \n         this.bird = bird; \n    } \n}</code></pre>"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<p>Design patterns use the Adapter pattern to solve problems with different interface problems. Which action does the Adapter pattern take?</p>",
+      "options": [
+        "The Adapter pattern handles different data types into an international type for all classes.",
+        "The Adapter pattern handles the implementation of difficult designs into the source code.",
+        "The Adapter pattern handles different programming languages.",
+        "The Adapter pattern handles the work of translating the request to a new class."
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<p>The Observer pattern has design principles of loose coupling. Describe the term \"loose coupling.\"</p>",
+      "options": [
+        "Loosely coupled means the design can be dynamic, with other design patterns with no logic.",
+        "Loosely coupled means designs can be interchangeable.",
+        "Loosely coupled means routines are called by an application and executed as needed.",
+        "Loosely coupled means designs can be integrated into many different patterns."
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<p>The Observer pattern has two components; they are the subscriber and the publisher. Which type of relationship exists with the subscriber and publisher?</p>",
+      "options": [
+        "It is a many-to-one relationship. There is many publishers to one subscriber.",
+        "Publishers post messages to a message broker, and subscribers register subscriptions to the message broker.",
+        "Publishers send messages, and subscribers receive the messages.",
+        "It is a one-to-many relationship. There is one publisher to many subscribers."
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>The Observer pattern uses the Subject interface. Which three methods comprise the Subject interface?</p>",
+      "options": [
+        "Send method, Receive method, and Register method",
+        "RegisterObserver method, RemoveObserver method, and NotifyObserver method",
+        "Create method, Subscribe method, and Update method",
+        "Subscribe method, Publish method, and Update method"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>Why are the subjects and observers in the Observer pattern considered \"loosely coupled\"?</p>",
+      "options": [
+        "Because they are in configuration files; they are not coded.",
+        "Because they do not know a lot about each other, they are independent.",
+        "Because they are considered subclasses and need the superclass for any interaction.",
+        "Because they dependent on the main superclass."
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>In Design Patterns, we favor composition over inheritance. Why is this beneficial?</p>",
+      "options": [
+        "Inheritance is difficult to code and harder to debug in a java.",
+        "We can use composition to get the flexibility, without all the complexity that inheritance gives us.",
+        "Composition is more important when creating a difficult design.",
+        "We can use the step-by-step process that composition gives us."
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>Why is the \"open-closed principle\" so important in the Decorator pattern?</p>",
+      "options": [
+        "The open-closed principle explains that classes should have case statements that switch open and closed.",
+        "The open-closed principle explains that classes should be open for extension, but closed for modification.",
+        "The open-closed principle explains that classes need to have tightly coupled patterns to improve performance.",
+        "The open-closed principle means that classes can be switched by a trigger to open or closed classes."
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>Java provides several collections to store objects in a data structure. Which interface is used to empty or store more items in a collection?</p>",
+      "options": [
+        "The iterator interface is used to display what is in a collection.",
+        "The iterator interface allows databases to store, remove, or create data.",
+        "The iterator interface allows data to be accessed, removed, or stored in a collection.",
+        "The iterator interface removes the whole collection."
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<p>Java has a variety of different collections. What is the difference between Array and an ArrayList?</p>",
+      "options": [
+        "The Array is a collection of objects, whereas the ArrayList is a collection of data types.",
+        "The Array is a collection of data types, whereas the ArrayList is a collection of objects.",
+        "The Array is a collection of binary data, whereas the ArrayList is a collection of objects.",
+        "The Array is a collection of integer data types, whereas the ArrayList is a collection of lists."
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>Java has several packages that contain interfaces and classes, which you can use for the Iterator pattern. Which package can be used for the Iterator pattern?</p>",
+      "options": [
+        "Java has the \"java.iterator\" package for the Iterator pattern.",
+        "Java has the \"java.iterator.built-in\" package for the Iterator pattern.",
+        "Java has the \"java.util.iterator\" package for the Iterator pattern.",
+        "Java has the \"java.util.collection\" package for the Iterator pattern."
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<p>The Iterator pattern is used frequently. Which coding format creates the Iterator pattern?</p>",
+      "options": [
+        "<pre><code>while let animal = animalIterator.next() {\n     print(animal)\n}</code></pre>",
+        "<pre><code>animals.makeIterator()\nwhile let animal = animalIterator.next() {\n     print(animal)\n}</code></pre>",
+        "<pre><code>var animalIterator = animals.makeIterator()\nwhile let animal  {\n     print(animal)\n}</code></pre>",
+        "<pre><code>var animalIterator = animals.makeIterator()\nwhile let animal = animalIterator.next() {\n     print(animal)\n}</code></pre>"
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<p>The Factory Pattern also has a Simple Factory Pattern. What is the Simple Factory Pattern?</p>",
+      "options": [
+        "The Simple Factory Pattern separates the superclass from the subclass.",
+        "The Simple Factory Pattern uses abstraction for methods, variables, and objects.",
+        "The Simple Factory Pattern uses algorithms to separate the client objects.",
+        "The Simple Factory Pattern decouples the process of creating and using objects from the clients."
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<p>Why does the Factory pattern provide loose coupling and high cohesion?</p>",
+      "options": [
+        "The Factory pattern is a creational pattern that is flexible and uses loose coupling.",
+        "The Factory pattern divides classes into categories and uses abstract methods.",
+        "The Factory pattern uses configuration files instead of coding. This creates loose coupling.",
+        "The Factory pattern encapsulates object creation logic, which makes it easy to change later."
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<p>With the Factory Method pattern, which process is implemented with the abstract superclass \"PizzaStore,\" and derived down to the subclasses \"PizzaStores\"?</p>",
+      "options": [
+        "Every PizzaStore is the same and is dependent.",
+        "Every PizzaStore is unique to the superclass PizzaStore.",
+        "Every algorithm is used by the subclasses from the superclass.",
+        "Every PizzaStore is loose coupled and interacts independently."
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<p>Which group of design patterns describes how inheritance and aggregation can be used to provide additional functionality?</p>",
+      "options": [
+        "structural",
+        "creational",
+        "behavioral",
+        "defining"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<p>Why should one use a design pattern when possible?</p>",
+      "options": [
+        "It will enable the use of shared code.",
+        "It will likely result in code that is more easily extensible and maintainable.",
+        "It will result in a more compact product.",
+        "It will speed initial development."
+      ],
+      "correctAnswers": [
+        1
+      ]
+    }
+  ]
+}

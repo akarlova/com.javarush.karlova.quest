@@ -1,0 +1,10 @@
+nickname,role,teamId,testId,title,level,language,expectedLives
+Malfoy,STUDENT,4,1,Astronomy,EASY,ru,3
+Granger,STUDENT,3,2,Charms,HARD,en,3
+Dumbledore,MENTOR,3,1,Transfiguration,HARD,en,2
+Scamander,STUDENT,2,2,Care of Magical Creatures,EASY,en,3
+Lovegood,STUDENT,1,1,Numerology,HARD,ru,3
+McGonagall,MENTOR,1,1,Trasfiguration,EASY,en,2
+Snape, MENTOR,4,2,Potions,HARD,ru,2
+Black, MENTOR,1,1,Defense Against the Dark Arts,HARD,ru,2
+Potter,STUDENT,3,2,Quidditch,EASY,en,3

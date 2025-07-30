@@ -1,0 +1,497 @@
+{
+  "id": 4,
+  "title": "Java Core",
+  "level": "HARD",
+  "language": "en",
+  "questions": [
+    {
+      "questionText": "<p>What is a memory leak?</p>",
+      "options": [
+        "A big object that consumes a lot of memory",
+        "The situation when the application performance is constantly degrading",
+        "The situation when an application crashes accidentally.",
+        "The situation when objects which still have active references are no longer used. That is, a garbage collector is unable to remove from memory."
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<p>What will be printed to the screen?  </p>\n<pre><code>public interface A {\n    String text = \"a\";\n}</code></pre>\n<pre><code>public interface B {\n    String text = \"b\";\n}</code></pre>\n<pre><code>class Implementor implements A, B {\n}\npublic class C {\n    public static void main(String[] args) {\n        System.out.println(Implementor.text);\n    }\n}</code></pre>",
+      "options": [
+        "a",
+        "Runtime error",
+        "b",
+        "Compilation fails"
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<pre><code>Given the following code. Select TWO correct statements\nabstract class A {\n    int p1;\n    A() {\n        p1 = 1;\n    }\n    ...\n}\nclass B extends A {\n}</code></pre>",
+      "options": [
+        "You can declare constructors in an abstract class",
+        "A class can be non-abstract yet contain abstract methods",
+        "A class may be declared abstract without having any abstract methods",
+        "An abstract class cannot have constructors, since you can’t instantiate an abstract class object"
+      ],
+      "correctAnswers": [
+        0,
+        2
+      ]
+    },
+    {
+      "questionText": "<pre><code>What would be the result of attempting to compile and run the following code?\npublic class T10 {\n    public static void main(String[] args) {\n        B c = new C();\n        System.out.print(c.max(1, 2));\n    }\n}\ninterface X {\n    default int max(int x, int y) {\n        return x > y ? x : y;\n    }\n}\nclass B implements X {\n    public int max(int x, int y) {\n        // call the default X.max(...) on an anonymous X\n        return 2 * new X() { }.max(x, y);\n    }\n}\nclass C extends B {\n    public int max(int x, int y) {\n        // double both arguments and then call B.max(...)\n        return super.max(2 * x, 2 * y);\n    }\n}</code></pre>",
+      "options": [
+        "4",
+        "8",
+        "2",
+        "Compilation fails"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>What will be result of compiling and running the code snippet?</p>\n<pre><code>public class A {\n    public String str = \"ab\";\n    public A() {\n        printLength();\n    }\n    public void printLength() {\n        System.out.println(str.length());\n    }\n}\npublic class B extends A {\n    public String str = \"abc\";</code></pre>\n<pre><code>    public void printLength() {\n        System.out.println(str.length());\n    }\n}\npublic class C {\n    public static void main(String[] args) {\n       new B();\n    }\n}</code></pre>",
+      "options": [
+        "Compilation error",
+        "3",
+        "2",
+        "Runtime Error"
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<pre><code>What can be changed when overriding a method?  \nSelect all correct statements.</code></pre>",
+      "options": [
+        "Add new exception types",
+        "Change the name of the argument",
+        "Access modifier (widen the access)",
+        "Change the order of exceptions or remove the throws clause altogether"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "questionText": "<pre><code>Which of the entries will create an inner-class object?\nclass Outer {\n    static class Inner {}\n}</code></pre>",
+      "options": [
+        "new Outer.Inner();",
+        "new Outer.new Inner();",
+        "new Outer().Inner();",
+        "new Outer().new Inner();"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<p>Which statements about inheritance is true?</p>",
+      "options": [
+        "All primitives and objects inherit a set of methods.",
+        "Inheritance allows you to write methods that reference themselves.",
+        "Inheritance always leads to simpler code.",
+        "Inheritance allows objects to access commonly used attributes and methods."
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<pre><code>What is the result of the following statements?\nList<Integer> list = Arrays.asList(1, 2, 3, 4, 5);\nint sum = list.stream()\n              .reduce(1, Integer::sum);\nSystem.out.println(sum);</code></pre>",
+      "options": [
+        "15",
+        "10",
+        "16",
+        "1"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<p>Consider: o1 and o2 denote two different object references to different objects of same class. Which TWO of these statements are true?</p>",
+      "options": [
+        "o1 == o2 is always false.",
+        "o1.hashCode() == o2.hashCode() is always false.",
+        "Nothing can be said about o1.equals(o2).",
+        "o1.equals(o2) is always false."
+      ],
+      "correctAnswers": [
+        0,
+        2
+      ]
+    },
+    {
+      "questionText": "<pre><code>What will be result of compiling and running the code snippet?\nint i = 3;\nint j = 7;\nSystem.out.print(\n    switch (i) {\n        case 1            -> --j;\n        case 2, 3         -> j--;\n        case 4, 5, 6      -> --j;\n        default           -> 0;\n    }\n    + \" \" + j\n);</code></pre>",
+      "options": [
+        "6 6",
+        "7 6",
+        "7",
+        "67"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<pre><code>Given the following classes, what will be the output of compiling and running the class Vehicle?\nclass Auto {\n    public void drive() {\n        System.out.print(\"A\");\n    }\n}</code></pre>\n<pre><code>class Vehicle extends Auto {\n    public void drive() {\n        System.out.print(\"W\");\n    }\n}</code></pre>\n<pre><code>public class Vehicle {\n    public static void main(String[] args) {\n        Auto auto    = new Auto();\n        Vehicle vehicle = new Vehicle();\n        auto.drive();         // line1\n        vehicle.drive();      // line2\n        auto = vehicle;       // line3\n        auto.drive();         // line4\n    }\n}</code></pre>",
+      "options": [
+        "AWW",
+        "AWA",
+        "An exception is thrown at runtime",
+        "Compilation fails at line1"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<pre><code>What will be the result of the following code snippet?\nString[] strings = {\"aa\", \"bb\", \"aa\", \"cc\", \"aa\", \"bb\"};\nMap<String, Integer> map = new HashMap<>();\nfor (String s : strings) {\n    map.merge(s, 1, (o, n) -> o + n);\n}\nvar result = map.computeIfPresent(\"bb\", (k, v) -> k.length() + v);\nSystem.out.println(result);</code></pre>",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "Compilation fails"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<pre><code>What will be TWO possible output as a result of compiling and executing the following code?\nclass Thread1 extends Thread {\n    public void run() {\n        System.out.print(this.currentThread().getName());\n    }\n}</code></pre>\n<pre><code>public class F {\n    public static void main(String[] args) {\n        Thread1 p1 = new Thread1();\n        Thread1 p2 = new Thread1();\n        p1.setName(\"A\");\n        p2.setName(\"B\");\n        p1.start();\n        p2.start();\n    }\n}</code></pre>",
+      "options": [
+        "mainA",
+        "BA",
+        "BB",
+        "AB"
+      ],
+      "correctAnswers": [
+        1,
+        3
+      ]
+    },
+    {
+      "questionText": "<p>Which TWO of these statements concerning the collection interfaces are true?</p>",
+      "options": [
+        "HashMap extends Hashtable",
+        "HashMap implements SortedMap",
+        "Set extends Collection",
+        "All methods defined in Collection are also defined in List"
+      ],
+      "correctAnswers": [
+        2,
+        3
+      ]
+    },
+    {
+      "questionText": "<pre><code>Which digits will be printed when the following program is run?\nint x = 0;\ntry {\n    int y = 1 / x;\n} catch (ArithmeticException e) {\n    System.out.print(1);\n} catch (RuntimeException e) {\n    System.out.print(2);\n    return;\n} catch (Exception e) {\n    System.out.print(3);\n} finally {\n    System.out.print(4);\n}\nSystem.out.print(5);</code></pre>",
+      "options": [
+        "145",
+        "1245",
+        "124",
+        "14"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<pre><code>Given the following class definitions and the following object instantiations, which of these assignments are legal at compile time?\ninterface X()  \nclass A {}  \nclass B extends A implements X()  \nclass C implements X()  \nclass T8 {  \n    public static void main(String[] args) {  \n        A a = new A();  \n        B b = new B();  \n        C c = new C();  \n        //line  \n    }  \n}</code></pre>",
+      "options": [
+        "b = a;",
+        "c = (C) b;",
+        "X x = c;",
+        "c = b;"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<pre><code>The result of the compilation and execution is:\npublic class Class3 {\n    static String f(String str, String str1) {\n        return str.replaceFirst(str, str1);\n    }\n    public static void main(String[] args) {\n        System.out.println( f(\"ab ab\", \"ab\") );\n    }\n}</code></pre>",
+      "options": [
+        "ab ab",
+        "An exception is thrown at runtime",
+        "ab ab ab",
+        "ab"
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<p>Which of the following is a valid method name?</p>",
+      "options": [
+        "$action()",
+        "/action()",
+        "act!ion()",
+        "action#()"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<pre><code>What will be the result of attempting to compile and run the following code snippet?\nDoubleStream s = DoubleStream.of(1.2, 2.4);\ns.peek(x -> System.out.print(x + \" \"))\n .filter(x -> x > 2)\n .count();</code></pre>",
+      "options": [
+        "1",
+        "2.4",
+        "1.2 2.4",
+        "An exception is thrown at runtime"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<p>Which TWO methods return an enum constant’s name?</p>",
+      "options": [
+        "name()",
+        "toString()",
+        "getName()",
+        "value()"
+      ],
+      "correctAnswers": [
+        0,
+        1
+      ]
+    },
+    {
+      "questionText": "<p>Which statements regarding the following code are correct, if NullPointerException is a subclass of RuntimeException and IOException is not a subclass of RuntimeException?</p>\n<pre><code>import java.io.*;\npublic class BaseA {\n    void doIt() throws IOException, NullPointerException {\n        justDoIt(\"a\");\n        // some I/O operations\n    }</code></pre>\n<pre><code>    int justDoIt(String str) {\n        if (str == null) throw new NullPointerException();\n        else return str.length();\n    }\n}</code></pre>\n<pre><code>class BaseB extends BaseA {\n    void doIt() {\n        justDoIt(\"b\");\n    }\n}</code></pre>",
+      "options": [
+        "Method doIt in class BaseB must at least give IOException in its throws clause.",
+        "Method doIt in class BaseB must at least give NullPointerException in its throws clause.",
+        "Method doIt in class BaseB does not need to specify any exceptions.",
+        "The code will not compile as RuntimeExceptions cannot be given in a throws clause. (Any exception can be given.)"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<p>Which of these keywords is used by the calling function to guard against the exception that is thrown by called function?</p>",
+      "options": [
+        "throws",
+        "thrown",
+        "throw",
+        "try"
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<p>The advantages of Java are that it is … (Choose TWO)</p>",
+      "options": [
+        "Distributed.",
+        "Single-Threaded.",
+        "Platform-dependent.",
+        "Platform-Independent."
+      ],
+      "correctAnswers": [
+        0,
+        3
+      ]
+    },
+    {
+      "questionText": "<p>Which exception is thrown when Java is out of memory?</p>",
+      "options": [
+        "MemoryOfBoundsError",
+        "OutOfMemoryException",
+        "MemoryOfBoundsException",
+        "OutOfMemoryError"
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<p>Which data structure HashSet internally uses?</p>",
+      "options": [
+        "Set",
+        "Collection",
+        "SortedSet",
+        "HashMap"
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<pre><code>What will be the result of following code fragment?\nInteger i = 5000;\nSystem.out.println(i.hashCode());</code></pre>",
+      "options": [
+        "Unpredictable output",
+        "0x1388",
+        "5000",
+        "Compilation fails"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<p>What will be the result of compiling and running the program?</p>\n<pre><code>double d[] = {1, 2, 3};\nObject ob = null;\nd = ob;\nob = d;\nSystem.out.println(d == ob);</code></pre>",
+      "options": [
+        "Compilation fails (can’t convert double[] to Object)",
+        "Compilation fails (can’t convert Object to double[])",
+        "true",
+        "false"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>What will be the result of the following code fragment?</p>\n<pre><code>Map<Integer, String> map = new LinkedHashMap<>();\nmap.put(1, \"one\");\nmap.put(2, \"two\");\nmap.put(3, \"three\");\nmap.put(1, \"newOne\");\nSystem.out.println(map);</code></pre>",
+      "options": [
+        "{1=newOne, 2=two, 3=three}",
+        "An exception is thrown at Runtime",
+        "{2=two, 3=three, 1=newOne}",
+        "Compilation failed"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<pre><code>Which TWO of the following are true given the declaration:\nIntStream is = IntStream.empty();</code></pre>",
+      "options": [
+        "is.sum() returns the type OptionalInt & is.average() returns the type double",
+        "is.sum() returns the type int & is.average() returns the type OptionalDouble",
+        "is.findAny() returns the type int",
+        "is.findAny() returns the type OptionalInt"
+      ],
+      "correctAnswers": [
+        1,
+        3
+      ]
+    },
+    {
+      "questionText": "<pre><code>What will the program compiling and executing result be?\npublic class C {\n    static Object ob;\n    public static void main(String[] args) {\n        System.out.println(ob.toString());\n    }\n}</code></pre>",
+      "options": [
+        "There is no right answer",
+        "Compilation fails",
+        "null",
+        "An NullPointerException is thrown at runtime"
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<p>Which of the following cannot be Type parameterized?</p>",
+      "options": [
+        "Generic methods",
+        "Static methods",
+        "None of these",
+        "Overloaded Methods"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<p>What functional interface suits a lambda expression that accepts a string and returns nothing?</p>",
+      "options": [
+        "Function",
+        "Predicate",
+        "Supplier",
+        "Consumer"
+      ],
+      "correctAnswers": [
+        3
+      ]
+    },
+    {
+      "questionText": "<pre><code>How many final‐modifiers would need to be removed for this application to compile?\nclass Quest {\n    public static final long someValue;\n    public final double value;\n    static { }\n    {\n        final int initValue = 2;\n        value = initValue;\n    }\n    static {\n        someValue = 2;\n        value = 3;\n    }\n}</code></pre>",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "A compilation fail cannot be eliminated by deleting all final declarations"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<pre><code>Suppose you need to create a BufferedReader to read from a standard byte stream. Which code excerpts in blanks 1 and 2 in the given code fragment will make this possible?\nReader reader = new _1_( new _2_( System.in ) );</code></pre>",
+      "options": [
+        "BufferedReader, File",
+        "BufferedReader, InputStreamReader",
+        "FileInputStream, File",
+        "InputStreamReader, BufferedReader"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<pre><code>Choose the best option based on this program:\npublic class Q9 {\n    public static void main(String[] args) {\n        Stream.of(\"java\", \"hello\", null).forEach(Q9::up);\n    }</code></pre>\n<pre><code>    private static void up(String str) {\n        Optional<String> string = Optional.ofNullable(str);\n        System.out.print(string.map(String::toUpperCase).orElse(\"start\"));\n    }\n}</code></pre>",
+      "options": [
+        "JAVAHELLOSTART",
+        "JAVAHELLOstart",
+        "JAVAHELLOnull",
+        "Optional[JAVA] Optional[HELLO] Optional[null]"
+      ],
+      "correctAnswers": [
+        1
+      ]
+    },
+    {
+      "questionText": "<pre><code>What will be the result of compiling and running the code?\nint a = 0;\nfor (int i = 0; i < 2; i++)\n    do\n        a++;\n    while (a < 5);\nSystem.out.print(a);</code></pre>",
+      "options": [
+        "55",
+        "5",
+        "6",
+        "An exception is thrown in runtime"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<p>How many lines of the following program contain compilation errors?</p>\n<pre><code>  1.  package com.pampam;\n  2.  public class QuestPrivate {\n  3.  private int var = 77;\n  4.  public void QuestPrivate() {\n  5.       super();\n  6.  }\n  7.   public QuestPrivate(int var) {\n  8.        this.var = this.var;\n  9.  }\n10.  public static void main(String[] args) {\n11.       System.out.print(new com.pampam.QuestPrivate(2).var);\n12.   }\n13. }</code></pre>",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    },
+    {
+      "questionText": "<pre><code>Which of functional interfaces complete the following code?\nx1 = String::new;</code></pre>",
+      "options": [
+        "Supplier<String>",
+        "BinaryConsumer<String, String>",
+        "Consumer<String>",
+        "UnaryOperator<String, String>"
+      ],
+      "correctAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "<p>What will be the result of compiling and running the code snippet?</p>\n<pre><code>double x = -1;\nSystem.out.println(x <= -1 ? -1 : 1.0);</code></pre>",
+      "options": [
+        "-1",
+        "Compilation fails",
+        "-1.0",
+        "1.0"
+      ],
+      "correctAnswers": [
+        2
+      ]
+    }
+  ]
+}
