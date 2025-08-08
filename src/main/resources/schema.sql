@@ -1,22 +1,19 @@
-DROP TABLE IF EXISTS results CASCADE;
-DROP TABLE IF EXISTS users CASCADE;
-DROP TABLE IF EXISTS teams CASCADE;
-
-
-CREATE TABLE teams
+CREATE TABLE IF NOT EXISTS teams
 (
     id          INT PRIMARY KEY AUTO_INCREMENT,
     name        VARCHAR(30)  NOT NULL,
     avatar_path VARCHAR(255) NOT NULL
 );
 INSERT INTO teams (id, name, avatar_path)
-VALUES
-    (1, 'PuffinClaw', 'Puffin_Ravenclaw_Icon.png'),
-    (2, 'DeerPuff',   'Deer_HufflePuff_Icon.png'),
-    (3, 'KittenDor',  'Gryffindor_Kitty_Icon.png'),
-    (4, 'RaptorRin',  'Slytherin_Raptor_Icon.png');
+SELECT * FROM (
+    SELECT 1, 'PuffinClaw', 'Puffin_Ravenclaw_Icon.png' UNION ALL
+    SELECT 2, 'DeerPuff',   'Deer_HufflePuff_Icon.png'  UNION ALL
+    SELECT 3, 'KittenDor',  'Gryffindor_Kitty_Icon.png' UNION ALL
+    SELECT 4, 'RaptorRin',  'Slytherin_Raptor_Icon.png'
+) AS v(id, name, avatar_path)
+WHERE NOT EXISTS (SELECT 1 FROM teams);
 
-CREATE TABLE users
+CREATE TABLE IF NOT EXISTS users
 (
     id       BIGINT PRIMARY KEY AUTO_INCREMENT,
     nickname VARCHAR(30) NOT NULL UNIQUE,
@@ -25,7 +22,7 @@ CREATE TABLE users
     FOREIGN KEY (team_id) REFERENCES teams (id)
 );
 
-CREATE TABLE results
+CREATE TABLE IF NOT EXISTS results
 (
     id               BIGINT PRIMARY KEY AUTO_INCREMENT,
     user_id          BIGINT NOT NULL,

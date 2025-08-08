@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  quest-app:
+    build: .
+    container_name: quest-app
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
