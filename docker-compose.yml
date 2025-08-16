@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    ports: ["8888:8080"]
+    volumes:
+      - ./h2-data:/h2-data
+    restart: unless-stopped
+

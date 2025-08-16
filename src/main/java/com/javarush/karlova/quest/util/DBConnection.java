@@ -31,6 +31,8 @@ public class DBConnection {
 //        System.out.println(">>> URL from props = " + properties.getProperty("jdbc.url"));
 //        System.out.println(">>> H2 URL = " + conn.getMetaData().getURL());
         conn.setAutoCommit(true);
+        //System.out.println("Current working dir: " + new java.io.File(".").getAbsolutePath());
+        //System.out.println("URL: " + conn.getMetaData().getURL());
         return conn;
     }
 
