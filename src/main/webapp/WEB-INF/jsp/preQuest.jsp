@@ -141,7 +141,7 @@
                 <div class="beast-container">
                     <img src="<c:url value='/resources/images/avatars/Puffin_Ravenclaw_Icon.png'/>"
                          alt="Magic Trophy"
-                    class="beast-icon avatar–flip"/>
+                    class="beast-icon flip-h"/>
                     <img src="<c:url value='/resources/images/avatars/Slytherin_Raptor_Icon.png'/>"
                          alt="Magic Trophy"
                     class="beast-icon"/>

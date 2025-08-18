@@ -323,23 +323,70 @@ body.team-bg {
     vertical-align: middle;
 }
 
-/* КУБКИ*/
-/* контейнер для магического кубка */
-.beast-container {
-    position: absolute;
-    left: 50%;
-    bottom: 10rem;             /* отодвинуть над кнопкой */
-    transform: translateX(-50%);
-    pointer-events: none;
-    z-index: 10;
+/* Блок со зверями: в поток, адаптивные отступы */
+.beast-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: clamp(2px, 2vw, 2px);
+    flex-wrap: wrap;                 /* чтобы при зуме могли переноситься */
+    margin: clamp(4px, 1.2vw, 12px) 0; /* зазор над кнопкой */
+    position: relative;
+    z-index: 1;
 }
-.beast-icon {
-    height: 15rem;    /* например, 4rem — 4×размер базового шрифта */
-    width: auto;
+
+/* Сами картинки с ограничениями размера */
+.beast-icon{
+    position: static;
+    width: clamp(110px, 16vw, 200px);
+    height: auto;
+    max-height: 260px;
+    object-fit: contain;
+    pointer-events: none;            /* клики проходят к кнопке, если соприкасаются */
 }
-.avatar–flip {
-    transform: scaleX(-1);
+
+/* Кнопка всегда поверх и с запасом места сверху */
+.submit-container{
+    position: relative;
+    z-index: 5;
+    margin: clamp(6px, 1.2vw, 12px) 0;
 }
+
+/* уже есть .beast-icon — оставь его как есть */
+.beast-icon.flip-h {
+    transform: scaleX(-1);     /* поворот по горизонтали */
+    transform-origin: center;
+    backface-visibility: hidden;
+}
+
+/* если на очень узких экранах аватары переносятся друг под другом — можно снять зеркалирование */
+@media (max-width: 600px){
+    .beast-icon.flip-h { transform: none; }
+}
+
+
+/* Сетка по умолчанию имеет высоту по содержимому и без фиксированных рядов */
+.teams-grid{
+    flex: 0 0 auto;        /* <— вместо flex:1 */
+    grid-template-rows: unset; /* <— убираем 2fr 2fr */
+    align-content: start;
+}
+
+
+/* На узких экранах — поменьше отступов/размеров */
+@media (max-width: 768px){
+    .beast-icon{ width: clamp(110px, 28vw, 180px); }
+}
+
+/* По умолчанию — без лишних отступов */
+.teams-grid .team-card { margin-top: 0; }
+
+/* Отступы нужны только на шаге выбора команды (когда 4 карточки) */
+.teams-grid:has(> .team-card:nth-child(4)) .team-card:nth-child(1),
+.teams-grid:has(> .team-card:nth-child(4)) .team-card:nth-child(2){ margin-top:4rem; }
+
+.teams-grid:has(> .team-card:nth-child(4)) .team-card:nth-child(3),
+.teams-grid:has(> .team-card:nth-child(4)) .team-card:nth-child(4){ margin-top:6rem; }
 
 
 /* СПИСОК ТЕСТОВ*/
